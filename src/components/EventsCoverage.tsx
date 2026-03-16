@@ -3,13 +3,6 @@ import { Calendar, ExternalLink } from 'lucide-react';
 
 const events = [
   {
-    name: 'Freshers Welcome 2025',
-    date: 'August 15, 2025',
-    desc: 'Welcoming the new batch with a night of music, dance, and memories.',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop',
-    link: '#',
-  },
-  {
     name: 'Tech Fest 2025',
     date: 'October 10, 2025',
     desc: 'Covering the biggest technical symposium of the year.',
@@ -48,15 +41,16 @@ const events = [
 
 export function EventsCoverage() {
   return (
-    <section id="events" className="py-24 md:py-32 bg-transparent relative z-10">
+    <section className="py-24 md:py-32 bg-primary relative z-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
+        <div className="mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-secondary font-semibold tracking-wider uppercase text-sm mb-4"
+            className="text-secondary font-bold tracking-widest uppercase text-sm mb-6 flex items-center gap-4"
           >
+            <span className="w-12 h-px bg-secondary"></span>
             Our Portfolio
           </motion.h2>
           <motion.h3
@@ -64,7 +58,7 @@ export function EventsCoverage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent"
+            className="text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
           >
             Events Coverage
           </motion.h3>
@@ -78,27 +72,27 @@ export function EventsCoverage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col h-full group"
+              className="group flex flex-col h-full border border-white/10 hover:border-secondary transition-colors duration-300 bg-white/5"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-64 overflow-hidden border-b border-white/10">
                 <img
                   src={event.image}
                   alt={event.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-300" />
               </div>
               
-              <div className="p-6 flex flex-col flex-grow relative z-10 -mt-6 bg-gradient-to-b from-transparent to-primary/20">
-                <div className="flex items-center gap-2 text-secondary text-sm font-medium mb-3">
-                  <Calendar size={16} />
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex items-center gap-3 text-secondary font-bold text-xs tracking-widest uppercase mb-4">
+                  <Calendar size={14} />
                   <span>{event.date}</span>
                 </div>
-                <h4 className="text-2xl font-display font-bold text-neutral-white mb-3 group-hover:text-secondary transition-colors">
+                <h4 className="text-3xl font-display font-bold text-neutral-white mb-4 uppercase leading-none group-hover:text-secondary transition-colors">
                   {event.name}
                 </h4>
-                <p className="text-neutral-white/70 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-neutral-white/60 font-sans font-light text-sm leading-relaxed mb-8 flex-grow">
                   {event.desc}
                 </p>
                 
@@ -106,10 +100,10 @@ export function EventsCoverage() {
                   href={event.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full bg-white/5 border border-white/10 text-neutral-white font-semibold py-3 rounded-xl hover:bg-secondary hover:text-primary transition-colors duration-300 mt-auto"
+                  className="inline-flex items-center justify-between w-full border-t border-white/10 pt-6 text-neutral-white font-bold uppercase tracking-widest text-xs hover:text-secondary transition-colors duration-300 mt-auto"
                 >
                   View Event Album
-                  <ExternalLink size={18} />
+                  <ExternalLink size={16} />
                 </a>
               </div>
             </motion.div>

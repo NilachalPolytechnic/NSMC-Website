@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Camera } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 import { cn } from '../utils/cn';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Team', href: '#team' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Events', href: '#events' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Gallery', href: '/gallery' },
+  { name: 'Events', href: '/events' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export function Navbar() {
@@ -34,7 +34,7 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <div className={cn(
             "p-2 rounded-xl transition-colors",
             isScrolled ? "bg-white/10 text-secondary group-hover:bg-secondary group-hover:text-primary" : "bg-white/10 text-neutral-white group-hover:bg-secondary group-hover:text-primary"
@@ -43,25 +43,25 @@ export function Navbar() {
           </div>
           <span className={cn(
             "font-display font-bold text-xl tracking-tight transition-colors",
-            isScrolled ? "text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent" : "text-neutral-white drop-shadow-md"
+            isScrolled ? "text-neutral-white" : "text-neutral-white drop-shadow-md"
           )}>
             NSMC
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
-                className={cn(
+              <NavLink
+                to={link.href}
+                className={({ isActive }) => cn(
                   "text-sm font-medium transition-colors hover:text-secondary",
-                  isScrolled ? "text-neutral-white/90 hover:text-secondary" : "text-neutral-white drop-shadow-md"
+                  isActive ? "text-secondary" : isScrolled ? "text-neutral-white/90" : "text-neutral-white drop-shadow-md"
                 )}
               >
                 {link.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -87,13 +87,16 @@ export function Navbar() {
             <ul className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <NavLink
+                    to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-8 py-4 text-neutral-white hover:bg-white/10 hover:text-secondary font-medium transition-colors"
+                    className={({ isActive }) => cn(
+                      "block px-8 py-4 font-medium transition-colors hover:bg-white/10",
+                      isActive ? "text-secondary bg-white/5" : "text-neutral-white hover:text-secondary"
+                    )}
                   >
                     {link.name}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>

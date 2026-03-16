@@ -3,6 +3,24 @@ import { Instagram, Linkedin, Mail } from 'lucide-react';
 
 const batchesData = [
   {
+    batchName: 'Faculty In-Charge',
+    description: 'The guiding pillars and mentors of the Nilachal Polytechnic Media Club.',
+    members: [
+      {
+        name: 'Dr. Rajesh Kumar',
+        role: 'Chief Coordinator',
+        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop',
+        desc: 'Providing strategic direction and continuous support to the club.',
+      },
+      {
+        name: 'Prof. Anita Sharma',
+        role: 'Faculty Advisor',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
+        desc: 'Mentoring students in creative media and event management.',
+      },
+    ]
+  },
+  {
     batchName: 'Alumni',
     description: 'The founding members who established the creative foundation.',
     members: [
@@ -65,15 +83,16 @@ const futureMembers = [
 
 export function TeamShowcase() {
   return (
-    <section id="team" className="py-24 md:py-32 bg-transparent relative z-10">
+    <section className="py-24 md:py-32 bg-primary relative z-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
+        <div className="mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-secondary font-semibold tracking-wider uppercase text-sm mb-4"
+            className="text-secondary font-bold tracking-widest uppercase text-sm mb-6 flex items-center gap-4"
           >
+            <span className="w-12 h-px bg-secondary"></span>
             The Faces Behind The Lens
           </motion.h2>
           <motion.h3
@@ -81,36 +100,36 @@ export function TeamShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-display font-bold text-neutral-white"
+            className="text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
           >
             Meet Our Team
           </motion.h3>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-32">
           {batchesData.map((batch, batchIndex) => (
             <div key={batchIndex}>
-              <div className="mb-10 border-b border-white/10 pb-4">
+              <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
                 <motion.h4 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="text-3xl font-display font-bold text-secondary mb-2"
+                  className="text-4xl md:text-5xl font-display font-bold text-secondary uppercase tracking-wide"
                 >
                   {batch.batchName}
                 </motion.h4>
                 <motion.p
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className="text-neutral-white/60"
+                  className="text-neutral-white/60 font-sans font-light max-w-md text-right hidden md:block"
                 >
                   {batch.description}
                 </motion.p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {batch.members.map((member, index) => (
                   <motion.div
                     key={index}
@@ -118,27 +137,27 @@ export function TeamShowcase() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group relative overflow-hidden rounded-2xl glass-panel aspect-[3/4]"
+                    className="group relative overflow-hidden bg-white/5 aspect-[3/4] border border-white/10"
                   >
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <h4 className="text-2xl font-display font-bold text-neutral-white mb-1">{member.name}</h4>
-                      <p className="text-secondary font-medium text-sm mb-3">{member.role}</p>
-                      <p className="text-neutral-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 line-clamp-2 mb-4">
+                    <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                      <h4 className="text-3xl font-display font-bold text-neutral-white mb-2 uppercase leading-none">{member.name}</h4>
+                      <p className="text-secondary font-bold text-sm mb-4 tracking-widest uppercase">{member.role}</p>
+                      <p className="text-neutral-white/70 font-sans font-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 line-clamp-2 mb-6">
                         {member.desc}
                       </p>
                       
-                      <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Instagram size={18} /></a>
-                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Linkedin size={18} /></a>
-                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Mail size={18} /></a>
+                      <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Instagram size={20} /></a>
+                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Linkedin size={20} /></a>
+                        <a href="#" className="text-neutral-white hover:text-secondary transition-colors"><Mail size={20} /></a>
                       </div>
                     </div>
                   </motion.div>
@@ -152,13 +171,13 @@ export function TeamShowcase() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: (batch.members.length + index) * 0.1 }}
-                    className="group relative overflow-hidden rounded-2xl glass-panel glass-panel-hover border-dashed border-white/20 aspect-[3/4] flex flex-col items-center justify-center text-center p-6 transition-all duration-300 cursor-pointer"
+                    className="group relative overflow-hidden bg-white/5 border border-dashed border-white/20 aspect-[3/4] flex flex-col items-center justify-center text-center p-8 transition-all duration-300 hover:bg-white/10 hover:border-secondary cursor-pointer"
                   >
-                    <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 text-neutral-white/40 group-hover:text-secondary group-hover:scale-110 transition-all duration-300 shadow-sm">
-                      <span className="text-2xl font-bold">+</span>
+                    <div className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center mb-6 text-neutral-white/40 group-hover:text-secondary group-hover:border-secondary transition-all duration-300">
+                      <span className="text-3xl font-light">+</span>
                     </div>
-                    <h4 className="text-xl font-display font-bold text-neutral-white/60 group-hover:text-secondary transition-colors">{member.title}</h4>
-                    <p className="text-neutral-white/40 font-medium text-sm mt-2 group-hover:text-secondary/70">{member.role}</p>
+                    <h4 className="text-2xl font-display font-bold text-neutral-white/60 group-hover:text-neutral-white transition-colors uppercase">{member.title}</h4>
+                    <p className="text-secondary/60 font-bold text-sm mt-3 tracking-widest uppercase group-hover:text-secondary">{member.role}</p>
                   </motion.div>
                 ))}
               </div>
