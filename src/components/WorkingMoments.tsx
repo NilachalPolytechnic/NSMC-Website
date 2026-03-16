@@ -16,16 +16,16 @@ export function WorkingMoments() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-24 md:py-32 bg-primary relative z-10 border-t border-white/10">
+    <section className="py-16 md:py-32 bg-primary relative z-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-secondary font-bold tracking-widest uppercase text-sm mb-6 flex items-center gap-4"
+            className="text-secondary font-bold tracking-widest uppercase text-xs md:text-sm mb-4 md:mb-6 flex items-center gap-4"
           >
-            <span className="w-12 h-px bg-secondary"></span>
+            <span className="w-8 md:w-12 h-px bg-secondary"></span>
             Behind The Scenes
           </motion.h2>
           <motion.h3
@@ -33,13 +33,13 @@ export function WorkingMoments() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
+            className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
           >
             Working Moments
           </motion.h3>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px] grid-flow-dense">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 auto-rows-[150px] md:auto-rows-[250px] grid-flow-dense">
           {images.map((img, index) => (
             <motion.div
               key={index}

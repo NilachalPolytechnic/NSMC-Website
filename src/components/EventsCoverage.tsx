@@ -41,16 +41,16 @@ const events = [
 
 export function EventsCoverage() {
   return (
-    <section className="py-24 md:py-32 bg-primary relative z-10 border-t border-white/10">
+    <section className="py-16 md:py-32 bg-primary relative z-10 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-secondary font-bold tracking-widest uppercase text-sm mb-6 flex items-center gap-4"
+            className="text-secondary font-bold tracking-widest uppercase text-xs md:text-sm mb-4 md:mb-6 flex items-center gap-4"
           >
-            <span className="w-12 h-px bg-secondary"></span>
+            <span className="w-8 md:w-12 h-px bg-secondary"></span>
             Our Portfolio
           </motion.h2>
           <motion.h3
@@ -58,13 +58,13 @@ export function EventsCoverage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
+            className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-neutral-white uppercase leading-none"
           >
             Events Coverage
           </motion.h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {events.map((event, index) => (
             <motion.div
               key={index}
@@ -74,7 +74,7 @@ export function EventsCoverage() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group flex flex-col h-full border border-white/10 hover:border-secondary transition-colors duration-300 bg-white/5"
             >
-              <div className="relative h-64 overflow-hidden border-b border-white/10">
+              <div className="relative h-48 md:h-64 overflow-hidden border-b border-white/10">
                 <img
                   src={event.image}
                   alt={event.name}
@@ -84,15 +84,15 @@ export function EventsCoverage() {
                 <div className="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-300" />
               </div>
               
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-center gap-3 text-secondary font-bold text-xs tracking-widest uppercase mb-4">
-                  <Calendar size={14} />
+              <div className="p-6 md:p-8 flex flex-col flex-grow">
+                <div className="flex items-center gap-2 md:gap-3 text-secondary font-bold text-[10px] md:text-xs tracking-widest uppercase mb-3 md:mb-4">
+                  <Calendar size={12} className="md:w-3.5 md:h-3.5" />
                   <span>{event.date}</span>
                 </div>
-                <h4 className="text-3xl font-display font-bold text-neutral-white mb-4 uppercase leading-none group-hover:text-secondary transition-colors">
+                <h4 className="text-2xl md:text-3xl font-display font-bold text-neutral-white mb-3 md:mb-4 uppercase leading-none group-hover:text-secondary transition-colors">
                   {event.name}
                 </h4>
-                <p className="text-neutral-white/60 font-sans font-light text-sm leading-relaxed mb-8 flex-grow">
+                <p className="text-neutral-white/60 font-sans font-light text-xs md:text-sm leading-relaxed mb-6 md:mb-8 flex-grow">
                   {event.desc}
                 </p>
                 
@@ -100,10 +100,10 @@ export function EventsCoverage() {
                   href={event.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between w-full border-t border-white/10 pt-6 text-neutral-white font-bold uppercase tracking-widest text-xs hover:text-secondary transition-colors duration-300 mt-auto"
+                  className="inline-flex items-center justify-between w-full border-t border-white/10 pt-4 md:pt-6 text-neutral-white font-bold uppercase tracking-widest text-[10px] md:text-xs hover:text-secondary transition-colors duration-300 mt-auto"
                 >
                   View Event Album
-                  <ExternalLink size={16} />
+                  <ExternalLink size={14} className="md:w-4 md:h-4" />
                 </a>
               </div>
             </motion.div>

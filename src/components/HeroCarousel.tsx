@@ -65,15 +65,15 @@ export function HeroCarousel() {
                     transition={{ duration: 0.8, delay: isActive ? 0.2 : 0 }}
                     className="max-w-5xl mx-auto"
                   >
-                    <h1 className="text-6xl md:text-8xl lg:text-[10vw] leading-[0.85] font-display font-bold text-neutral-white mb-6 tracking-tighter uppercase">
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10vw] leading-[0.85] font-display font-bold text-neutral-white mb-4 md:mb-6 tracking-tighter uppercase">
                       {slide.title}
                     </h1>
-                    <p className="text-lg md:text-2xl text-neutral-white/70 mb-10 max-w-2xl mx-auto font-sans font-light">
+                    <p className="text-base sm:text-lg md:text-2xl text-neutral-white/70 mb-8 md:mb-10 max-w-2xl mx-auto font-sans font-light">
                       {slide.description}
                     </p>
                     <Link
                       to={slide.href}
-                      className="inline-flex items-center gap-3 bg-secondary text-primary font-bold px-10 py-5 rounded-none hover:bg-neutral-white transition-all duration-300 uppercase tracking-widest text-sm"
+                      className="inline-flex items-center gap-3 bg-secondary text-primary font-bold px-6 py-3 md:px-10 md:py-5 rounded-none hover:bg-neutral-white transition-all duration-300 uppercase tracking-widest text-xs md:text-sm"
                     >
                       {slide.cta}
                       <ArrowRight size={20} />
