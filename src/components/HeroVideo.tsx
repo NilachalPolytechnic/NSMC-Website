@@ -44,7 +44,7 @@ export function HeroVideo() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#gallery"
-              className="inline-flex items-center gap-2 bg-secondary text-primary font-bold px-8 py-4 rounded-full hover:bg-neutral-white transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(56,189,248,0.3)]"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-accent text-white font-bold px-8 py-4 rounded-full hover:from-white hover:to-white hover:text-primary transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(56,189,248,0.3)]"
             >
               Explore Our Work
               <ArrowRight size={20} />

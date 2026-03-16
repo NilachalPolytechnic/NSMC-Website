@@ -38,7 +38,7 @@ export function Contact() {
             <h4 className="text-3xl md:text-4xl font-display font-bold text-neutral-white mb-8 md:mb-12 uppercase tracking-wide">Reach Out</h4>
             <div className="space-y-8 md:space-y-12 flex-grow">
               <div className="flex items-start gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-secondary group-hover:text-primary transition-colors duration-300 shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-accent group-hover:text-white transition-colors duration-300 shrink-0">
                   <MapPin size={24} strokeWidth={1.5} className="md:w-7 md:h-7" />
                 </div>
                 <div>
@@ -48,7 +48,7 @@ export function Contact() {
               </div>
               
               <div className="flex items-start gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-secondary group-hover:text-primary transition-colors duration-300 shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-accent group-hover:text-white transition-colors duration-300 shrink-0">
                   <Mail size={24} strokeWidth={1.5} className="md:w-7 md:h-7" />
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export function Contact() {
               </div>
               
               <div className="flex items-start gap-4 md:gap-6 group">
-                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-secondary group-hover:text-primary transition-colors duration-300 shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center text-secondary border border-secondary/30 group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-accent group-hover:text-white transition-colors duration-300 shrink-0">
                   <Phone size={24} strokeWidth={1.5} className="md:w-7 md:h-7" />
                 </div>
                 <div>
@@ -71,10 +71,10 @@ export function Contact() {
             <div className="mt-12 md:mt-16 pt-8 md:pt-12 border-t border-white/10">
               <h5 className="text-lg md:text-xl font-display font-bold text-neutral-white mb-6 md:mb-8 uppercase tracking-widest">Follow Us</h5>
               <div className="flex gap-4 md:gap-6">
-                <a href="#" className="w-12 h-12 md:w-16 md:h-16 border border-white/20 text-neutral-white flex items-center justify-center hover:bg-secondary hover:text-primary hover:border-secondary transition-all duration-300">
+                <a href="#" className="w-12 h-12 md:w-16 md:h-16 border border-white/20 text-neutral-white flex items-center justify-center hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300">
                   <Instagram size={20} strokeWidth={1.5} className="md:w-6 md:h-6" />
                 </a>
-                <a href="#" className="w-12 h-12 md:w-16 md:h-16 border border-white/20 text-neutral-white flex items-center justify-center hover:bg-secondary hover:text-primary hover:border-secondary transition-all duration-300">
+                <a href="#" className="w-12 h-12 md:w-16 md:h-16 border border-white/20 text-neutral-white flex items-center justify-center hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-white hover:border-transparent transition-all duration-300">
                   <Mail size={20} strokeWidth={1.5} className="md:w-6 md:h-6" />
                 </a>
               </div>
@@ -124,7 +124,7 @@ export function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-secondary text-primary font-bold py-4 md:py-5 uppercase tracking-widest text-xs md:text-sm hover:bg-white transition-colors duration-300 mt-6 md:mt-8 border-2 border-secondary hover:border-white"
+                className="w-full bg-gradient-to-r from-secondary to-accent text-white font-bold py-4 md:py-5 uppercase tracking-widest text-xs md:text-sm hover:from-white hover:to-white hover:text-primary transition-all duration-300 mt-6 md:mt-8 border-2 border-secondary hover:border-white"
               >
                 Send Message
               </button>

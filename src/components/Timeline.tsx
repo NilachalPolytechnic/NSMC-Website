@@ -69,8 +69,8 @@ export function Timeline() {
               }`}
             >
               {/* Timeline Dot/Icon */}
-              <div className="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transform -translate-x-1/2 z-10 bg-primary border border-white/20 group-hover:border-secondary group-hover:bg-secondary transition-colors duration-300">
-                <div className="text-neutral-white group-hover:text-primary transition-colors duration-300">
+              <div className="absolute left-6 md:left-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transform -translate-x-1/2 z-10 bg-primary border border-white/20 group-hover:border-secondary group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-accent transition-colors duration-300">
+                <div className="text-neutral-white group-hover:text-white transition-colors duration-300">
                   <item.icon size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
                 </div>
               </div>

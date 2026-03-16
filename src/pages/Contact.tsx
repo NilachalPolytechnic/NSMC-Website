@@ -1,6 +1,7 @@
 import { JoinClub } from '../components/JoinClub';
 import { Contact as ContactSection } from '../components/Contact';
 import { motion } from 'motion/react';
+import { PageHero } from '../components/PageHero';
 
 export function Contact() {
   return (
@@ -9,37 +10,15 @@ export function Contact() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-20 md:pt-32 pb-8 md:pb-12"
+      className="pb-0"
     >
-      <div className="container mx-auto px-4 md:px-8 mb-12 md:mb-24">
-        <div className="max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-secondary font-bold tracking-widest uppercase text-[10px] md:text-sm mb-4 md:mb-8 flex items-center gap-3 md:gap-4"
-          >
-            <span className="w-6 md:w-12 h-px bg-secondary"></span>
-            Connect
-          </motion.h2>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-9xl lg:text-[10vw] font-display font-bold text-neutral-white mb-6 md:mb-12 leading-[0.85] uppercase tracking-tighter"
-          >
-            Get in <span className="text-secondary">Touch</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-3xl text-neutral-white/70 max-w-3xl leading-relaxed font-sans font-light"
-          >
-            Whether you want to join our creative family or have an inquiry, we'd love to hear from you.
-          </motion.p>
-        </div>
-      </div>
+      <PageHero
+        title="Get in"
+        highlight="Touch"
+        subtitle="Connect"
+        description="Whether you want to join our creative family or have an inquiry, we'd love to hear from you."
+        backgroundImage="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2000&auto=format&fit=crop"
+      />
       <JoinClub />
       <ContactSection />
     </motion.div>

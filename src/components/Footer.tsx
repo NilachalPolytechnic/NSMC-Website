@@ -15,7 +15,7 @@ export function Footer() {
             <Link to="/" onClick={scrollToTop} className="flex items-center gap-3 group mb-6 md:mb-8 inline-flex">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl transition-all duration-300 flex items-center justify-center overflow-hidden bg-white/10 group-hover:bg-white/20">
                 {/* Replace src with your actual NSMC logo path */}
-                <img src="https://placehold.co/100x100/1a1a1a/F27D26?text=NSMC" alt="NSMC Logo" className="w-full h-full object-cover" />
+                <img src="https://placehold.co/100x100/1a1a1a/00B4D8?text=NSMC" alt="NSMC Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-display font-bold text-2xl md:text-3xl tracking-tighter text-white uppercase">
                 NSMC
@@ -33,13 +33,13 @@ export function Footer() {
             </div>
 
             <div className="flex gap-3 md:gap-4">
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-secondary hover:text-secondary transition-all duration-300">
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-transparent hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-white transition-all duration-300">
                 <Instagram size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-secondary hover:text-secondary transition-all duration-300">
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-transparent hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-white transition-all duration-300">
                 <Linkedin size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-secondary hover:text-secondary transition-all duration-300">
+              <a href="#" className="w-10 h-10 md:w-12 md:h-12 border border-white/10 flex items-center justify-center hover:border-transparent hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-white transition-all duration-300">
                 <Mail size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
               </a>
             </div>
@@ -52,6 +52,7 @@ export function Footer() {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About', path: '/about' },
+                { name: 'Team', path: '/team' },
                 { name: 'Gallery', path: '/gallery' },
                 { name: 'Events', path: '/events' },
                 { name: 'Contact', path: '/contact' }
@@ -104,7 +105,7 @@ export function Footer() {
             className="flex items-center gap-3 md:gap-4 text-neutral-white/60 hover:text-secondary transition-colors font-bold uppercase tracking-widest text-[10px] md:text-xs group"
           >
             Back to top
-            <div className="w-8 h-8 md:w-10 md:h-10 border border-white/20 flex items-center justify-center group-hover:border-secondary group-hover:text-secondary transition-all duration-300">
+            <div className="w-8 h-8 md:w-10 md:h-10 border border-white/20 flex items-center justify-center group-hover:border-transparent group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-accent group-hover:text-white transition-all duration-300">
               <ArrowUp size={14} strokeWidth={1.5} className="md:w-4 md:h-4" />
             </div>
           </button>

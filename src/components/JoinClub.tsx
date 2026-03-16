@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function JoinClub() {
   return (
-    <section className="py-20 md:py-48 bg-secondary relative overflow-hidden z-10 border-t border-primary">
+    <section className="py-16 md:py-32 bg-gradient-to-br from-secondary to-accent relative overflow-hidden z-10 border-t border-primary">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 text-[20vw] font-display font-black text-primary/5 leading-none select-none">JOIN</div>
@@ -12,7 +12,7 @@ export function JoinClub() {
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="max-w-5xl mx-auto text-center border-4 border-primary p-8 md:p-24 bg-secondary relative">
+        <div className="max-w-5xl mx-auto text-center border-4 border-primary p-8 md:p-24 bg-gradient-to-br from-secondary to-accent relative">
           {/* Corner accents */}
           <div className="absolute top-0 left-0 w-4 h-4 md:w-8 md:h-8 border-b-4 border-r-4 border-primary bg-primary" />
           <div className="absolute top-0 right-0 w-4 h-4 md:w-8 md:h-8 border-b-4 border-l-4 border-primary bg-primary" />
@@ -63,7 +63,7 @@ export function JoinClub() {
               { icon: Edit3, label: 'Editing' },
               { icon: PenTool, label: 'Storytelling' },
             ].map((role, index) => (
-              <div key={index} className="flex items-center gap-2 md:gap-3 bg-primary text-secondary px-4 py-2 md:px-6 md:py-3 border border-primary hover:bg-transparent hover:text-primary transition-colors cursor-default uppercase tracking-widest text-[10px] md:text-xs font-bold">
+              <div key={index} className="flex items-center gap-2 md:gap-3 bg-primary text-white px-4 py-2 md:px-6 md:py-3 border border-primary hover:bg-transparent hover:text-primary transition-colors cursor-default uppercase tracking-widest text-[10px] md:text-xs font-bold">
                 <role.icon size={14} className="md:w-4 md:h-4" />
                 <span>{role.label}</span>
               </div>
@@ -78,7 +78,7 @@ export function JoinClub() {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 md:gap-4 bg-primary text-secondary font-bold px-8 py-4 md:px-12 md:py-6 hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-xs md:text-sm border-2 border-primary hover:border-white"
+              className="inline-flex items-center gap-3 md:gap-4 bg-primary text-white font-bold px-8 py-4 md:px-12 md:py-6 hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-xs md:text-sm border-2 border-primary hover:border-white"
             >
               Apply Now
               <ArrowRight size={20} className="md:w-6 md:h-6" />

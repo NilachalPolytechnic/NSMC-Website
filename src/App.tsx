@@ -12,6 +12,7 @@ import { About } from './pages/About';
 import { Gallery } from './pages/Gallery';
 import { Events } from './pages/Events';
 import { Contact } from './pages/Contact';
+import { Team } from './pages/Team';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />

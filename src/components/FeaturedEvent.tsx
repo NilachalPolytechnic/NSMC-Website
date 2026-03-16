@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function FeaturedEvent() {
   return (
-    <section className="relative py-32 md:py-48 bg-primary overflow-hidden border-t border-white/10">
+    <section className="relative py-16 md:py-32 bg-primary overflow-hidden border-t border-white/10">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed grayscale opacity-40"
@@ -53,7 +53,7 @@ export function FeaturedEvent() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             href="#"
-            className="inline-flex items-center gap-3 bg-secondary text-primary font-bold px-10 py-5 rounded-none hover:bg-neutral-white transition-all duration-300 uppercase tracking-widest text-sm"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-secondary to-accent text-white font-bold px-10 py-5 rounded-none hover:from-white hover:to-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-sm"
           >
             View Full Gallery
             <ArrowRight size={20} />

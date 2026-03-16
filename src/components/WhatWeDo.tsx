@@ -56,15 +56,15 @@ export function WhatWeDo() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white/5 p-6 md:p-8 hover:bg-secondary hover:text-primary transition-colors duration-300 group"
+              className="bg-white/5 p-6 md:p-8 hover:bg-gradient-to-br hover:from-secondary hover:to-accent hover:text-white transition-colors duration-300 group"
             >
-              <div className="mb-8 md:mb-12 text-neutral-white group-hover:text-primary transition-colors duration-300">
+              <div className="mb-8 md:mb-12 text-neutral-white group-hover:text-white transition-colors duration-300">
                 <service.icon size={40} strokeWidth={1} />
               </div>
               <h4 className="text-xl md:text-2xl font-bold font-display mb-3 md:mb-4 uppercase tracking-wide">
                 {service.title}
               </h4>
-              <p className="text-neutral-white/60 group-hover:text-primary/80 font-sans font-light text-sm leading-relaxed transition-colors duration-300">
+              <p className="text-neutral-white/60 group-hover:text-white/80 font-sans font-light text-sm leading-relaxed transition-colors duration-300">
                 {service.desc}
               </p>
             </motion.div>

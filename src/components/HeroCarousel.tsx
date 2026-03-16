@@ -73,7 +73,7 @@ export function HeroCarousel() {
                     </p>
                     <Link
                       to={slide.href}
-                      className="inline-flex items-center gap-3 bg-secondary text-primary font-bold px-6 py-3 md:px-10 md:py-5 rounded-none hover:bg-neutral-white transition-all duration-300 uppercase tracking-widest text-xs md:text-sm"
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-secondary to-accent text-white font-bold px-6 py-3 md:px-10 md:py-5 rounded-none hover:from-white hover:to-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-xs md:text-sm"
                     >
                       {slide.cta}
                       <ArrowRight size={20} />

@@ -7,6 +7,7 @@ import { cn } from '../utils/cn';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
+  { name: 'Team', href: '/team' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Events', href: '/events' },
   { name: 'Contact', href: '/contact' },
@@ -40,7 +41,7 @@ export function Navbar() {
             isScrolled ? "bg-white/10 group-hover:bg-white/20" : "bg-white/10 group-hover:bg-white/20"
           )}>
             {/* Replace src with your actual NSMC logo path (e.g., '/nsmc-logo.png') */}
-            <img src="https://placehold.co/100x100/1a1a1a/F27D26?text=NSMC" alt="NSMC Logo" className="w-full h-full object-cover" />
+            <img src="https://placehold.co/100x100/1a1a1a/00B4D8?text=NSMC" alt="NSMC Logo" className="w-full h-full object-cover" />
           </div>
           <span className={cn(
             "font-display font-bold text-lg md:text-xl tracking-tight transition-colors",

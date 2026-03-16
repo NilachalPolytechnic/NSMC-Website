@@ -1,7 +1,7 @@
 import { HeroCarousel } from '../components/HeroCarousel';
 import { ClubIntro } from '../components/ClubIntro';
 import { WhatWeDo } from '../components/WhatWeDo';
-import { Timeline } from '../components/Timeline';
+import { FeaturedEvent } from '../components/FeaturedEvent';
 import { motion } from 'motion/react';
 
 export function Home() {
@@ -16,7 +16,7 @@ export function Home() {
       <HeroCarousel />
       <ClubIntro />
       <WhatWeDo />
-      <Timeline />
+      <FeaturedEvent />
     </motion.div>
   );
 }

@@ -60,7 +60,7 @@ export function WorkingMoments() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="bg-secondary p-4 rounded-none text-primary transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-secondary to-accent p-4 rounded-none text-white transform scale-50 group-hover:scale-100 transition-transform duration-300">
                   <ZoomIn size={24} strokeWidth={2} />
                 </div>
               </div>
